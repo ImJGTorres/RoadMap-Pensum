@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Ruta - Pénsum Ingeniería de Sistemas</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+        p, ul {
+            background: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hoja de Ruta de Prerrequisitos - Ingeniería de Sistemas</h1>
+    <p>Este diagrama muestra las distintas ramas de prerrequisitos del pénsum académico con colores distintos para cada ruta:</p>
+    <ul>
+        <li style="background: #0066cc; color: white;">Matemáticas</li>
+        <li style="background: #cc0000; color: white;">Física</li>
+        <li style="background: #00aa00; color: white;">Programación</li>
+        <li style="background: #ff6600; color: white;">Comunicación</li>
+        <li style="background: #9933cc; color: white;">Sistemas</li>
+        <li style="background: #ff9900; color: white;">Seminarios</li>
+        <li style="background: #8b4513; color: white;">Bases de Datos</li>
+        <li style="background: #ff1493; color: white;">Software</li>
+        <li style="background: #20b2aa; color: white;">Redes</li>
+        <li style="background: #4169e1; color: white;">Algoritmos</li>
+        <li style="background: #daa520; color: white;">Negocios</li>
+        <li style="background: #ff6347; color: white;">Sociales</li>
+    </ul>
+    <div class="mermaid">
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'12px'}, 'flowchart':{'rankSpacing':100, 'nodeSpacing':60, 'curve':'basis'}}}%%
+flowchart LR
+    %% Nodos - Matematicas
+    CD["1155101<br/>Calculo diferencial<br/>(Semestre 1)"]
+    CI["1155201<br/>Calculo integral<br/>(Semestre 2)"]
+    AL["1155202<br/>Algebra lineal<br/>(Semestre 2)"]
+    CV["1155301<br/>Calculo vectorial<br/>(Semestre 3)"]
+    ED["1155401<br/>Ecuaciones diferenciales<br/>(Semestre 4)"]
+    AN["1155501<br/>Analisis numerico<br/>(Semestre 5)"]
+    MDISC["1155102<br/>Matematicas discretas<br/>(Semestre 1)"]
+    PE["1155402<br/>Probabilidad y estadistica<br/>(Semestre 4)"]
+    IO["1155502<br/>Investigacion de operaciones<br/>(Semestre 5)"]
+
+    %% Nodos - Fisica
+    FM["1155203<br/>Fisica mecanica<br/>(Semestre 2)"]
+    FE["1155303<br/>Fisica electromagnetica<br/>(Semestre 3)"]
+    OP["1155403<br/>Ondas y particulas<br/>(Semestre 4)"]
+    EL["1155503<br/>Electronica<br/>(Semestre 5)"]
+
+    %% Nodos - Programacion
+    FP["1155104<br/>Fundamentos de programacion<br/>(Semestre 1)"]
+    POO["1155204<br/>Programacion orientada a objetos<br/>(Semestre 2)"]
+    EDS["1155304<br/>Estructuras de datos<br/>(Semestre 3)"]
+    POO2["1155305<br/>Programacion orientada a objetos II<br/>(Semestre 3)"]
+    AA["1155404<br/>Analisis de algoritmos<br/>(Semestre 4)"]
+    TC["1155405<br/>Teoria de la computacion<br/>(Semestre 4)"]
+    AC["1155504<br/>Arquitectura de computadores<br/>(Semestre 5)"]
+    SO["1155604<br/>Sistemas operativos<br/>(Semestre 6)"]
+    BD["1155605<br/>Bases de datos<br/>(Semestre 6)"]
+    PW["1155606<br/>Programacion web<br/>(Semestre 6)"]
+    ADS["1155705<br/>Analisis y diseño de sistemas<br/>(Semestre 7)"]
+    IS["1155805<br/>Ingenieria de software<br/>(Semestre 8)"]
+    TGDC["1155704<br/>Teoria general de las comunicaciones<br/>(Semestre 7)"]
+    RC["1155804<br/>Redes de computadores<br/>(Semestre 8)"]
+    API["1155708<br/>Administracion de proyectos informaticos<br/>(Semestre 7)"]
+    PES["1155608<br/>Planeacion estrategica de sistemas de inf<br/>(Semestre 6)"]
+    FEP["1155808<br/>Formulacion y evaluacion de proyectos de sistemas<br/>(Semestre 8)"]
+
+    %% Nodos - Electivas
+    ADP["1155613<br/>Analisis de datos sobre python<br/>(Electiva)"]
+    DT["1151060<br/>Deuda tecnica en el desarrollo de software<br/>(Electiva)"]
+    MM["1155615<br/>Multimedia y realidad mixta<br/>(Electiva)"]
+    ATG["1155616<br/>Aplicaciones practicas de teoria de grafos<br/>(Electiva)"]
+    IA["1156703<br/>Inteligencia artificial<br/>(Electiva)"]
+    TG["1156704<br/>Teoria de grafos<br/>(Electiva)"]
+    DAM["1156901<br/>Desarrollo de aplicaciones moviles<br/>(Electiva)"]
+    SI["1156902<br/>Seguridad informatica<br/>(Electiva)"]
+    MINDAT["1157005<br/>Mineria de datos<br/>(Electiva)"]
+    LP["1155811<br/>Laboratorio de programacion<br/>(Electiva)"]
+    BDA["1155713<br/>Bases de datos avanzadas<br/>(Electiva)"]
+    GBD["1156702<br/>Gestion de bases de datos<br/>(Electiva)"]
+    ANDAT["1155716<br/>Analitica de datos<br/>(Electiva)"]
+    ADMC["1155523<br/>Analitica de datos en modelos cognitivos<br/>(Electiva)"]
+    RINAL["1156803<br/>Redes inalambricas<br/>(Electiva)"]
+    ASOR["1156804<br/>Administracion de so de red<br/>(Electiva)"]
+    RConv["1157002<br/>Redes convergentes<br/>(Electiva)"]
+    COMPNUBE["1157004<br/>Computacion en la nube<br/>(Electiva)"]
+    SISDIST["1157006<br/>Sistemas distribuidos<br/>(Electiva)"]
+    DAMICRO["1157007<br/>Desarrollo de aplicaciones basadas en microservicios<br/>(Electiva)"]
+    ARQSOFT["1155905<br/>Arquitectura de software<br/>(Electiva)"]
+    HTGP["1156904<br/>Herramientas tic para gestion de proyectos<br/>(Electiva)"]
+    AUDSIS["1156906<br/>Auditoria de sistemas<br/>(Electiva)"]
+    ARQONT["1156907<br/>Arquitectura dirigida por ontologias<br/>(Electiva)"]
+    METAG["1159608<br/>Metodologias agiles para el desarrollo de software<br/>(Electiva)"]
+    HACK["1155717<br/>Hacking defensivo y herramientas seguras<br/>(Electiva)"]
+    SIG["1156801<br/>Sistemas de informacion geografica<br/>(Electiva)"]
+    INFED["1156802<br/>Informatica educativa<br/>(Electiva)"]
+    SIEMP["1157001<br/>Sistemas de informacion empresarial<br/>(Electiva)"]
+    INFJUR["1157003<br/>Informatica juridica<br/>(Electiva)"]
+    TDORG["1155714<br/>Transformacion digital de las organizaciones<br/>(Electiva)"]
+    SOLTECH["1155715<br/>Soluciones tecnologica en el contexto social<br/>(Electiva)"]
+    HES["1150615<br/>Habilidades esenciales para el ingeniero de sistemas<br/>(Electiva)"]
+    ADQP["1155810<br/>Adquisiciones en la gestion de proyectos<br/>(Electiva)"]
+    GERT["1156805<br/>Gerencia y tecnologia<br/>(Electiva)"]
+    EMP["1155906<br/>Estrategias para la empleabiliad en sistemas<br/>(Electiva)"]
+    GTIC["1155908<br/>Gestion de tics<br/>(Electiva)"]
+    PSIC["1155513<br/>Psicologia<br/>(Electiva)"]
+    PSICIND["1155515<br/>Psicologia industrial<br/>(Electiva)"]
+    PSF["1155511<br/>Problemas sociales de frontera<br/>(Electiva)"]
+    CPD["1155516<br/>Catedra de paz desarrollo y posconflicto<br/>(Electiva)"]
+    RH["1155522<br/>Relaciones humanas<br/>(Electiva)"]
+    ETICA["1155707<br/>Etica profesional<br/>(Electiva)"]
+    DNB["1155406<br/>Descubriendo negocios basados tic<br/>(Electiva)"]
+    CN["1155612<br/>Crecimeinto de negocios<br/>(Electiva)"]
+    PS["1155611<br/>Proyecto social en ing de sistemas<br/>(Electiva)"]
+    TGN["1155711<br/>Tecnicas gerenciales y de negociacion<br/>(Electiva)"]
+    EFI["1155712<br/>Economia y finanzas para ingenieros<br/>(Electiva)"]
+    EDTT["1155910<br/>Emprendimiento digital y transformacion tecnologica<br/>(Electiva)"]
+    COMP["1156807<br/>Compiladores<br/>(Electiva)"]
+    PD["1156701<br/>Patrones de diseño<br/>(Electiva)"]
+    TICEDAMB["1156808<br/>Las tic y la educacion ambiental<br/>(Electiva)"]
+    RN["1156910<br/>Redes neuronales<br/>(Electiva)"]
+    PRAC["1155909<br/>Practica en ing de sistemas<br/>(Electiva)"]
+    PROYAC["1151058<br/>Proyecto academico<br/>(Electiva)"]
+    PROYACOP["1156903<br/>Proyecto academico opcional<br/>(Electiva)"]
+    PROYGRAD["1156001<br/>Proyecto de grado<br/>(Electiva)"]
+    CC["1155607<br/>Constitucion y civismo<br/>(Semestre 6)"]
+
+    %% Nodos - Comunicacion
+    C1["1155106<br/>Comunicacion I<br/>(Semestre 1)"]
+    C2["1155206<br/>Comunicacion II<br/>(Semestre 2)"]
+
+    %% Nodos - Sistemas
+    IIS["1155105<br/>Introduccion ing sistemas<br/>(Semestre 1)"]
+    NTS["1155521<br/>Nuevas tecnologias y sociedad<br/>(Electiva)"]
+    IVU["1155108<br/>Intro vida universitaria<br/>(Semestre 1)"]
+
+    %% Nodos - Seminarios
+    SI1["1155209<br/>Seminario integrador I<br/>(Semestre 2)"]
+    SI2["1155609<br/>Seminario integrador II<br/>(Semestre 6)"]
+    SI3["1155809<br/>Seminario integrador III<br/>(Semestre 8)"]
+    SInv1["1155306<br/>Seminario de investigacion I<br/>(Semestre 3)"]
+    SInv2["1155506<br/>Seminario de investigacion II<br/>(Semestre 5)"]
+    SInv3["1155706<br/>Seminario de investigacion III<br/>(Semestre 7)"]
+
+    %% Conexiones Matematicas
+    CD --> CI
+    CD --> AL
+    CD --> FM
+    CI --> CV
+    CV --> ED
+    ED --> AN
+    MDISC --> PE
+    PE --> IO
+
+    %% Conexiones Fisica
+    FM --> FE
+    FE --> OP
+    OP --> EL
+
+    %% Conexiones Programacion
+    FP --> POO
+    FP --> SI1
+    POO --> EDS
+    POO --> POO2
+    EDS --> AA
+    EDS --> TC
+    EDS --> AC
+    EDS --> BD
+    POO2 --> AC
+    POO2 --> BD
+    POO2 --> PW
+    AC --> SO
+    SO --> TGDC
+    BD --> ADS
+    PW --> ADS
+    ADS --> IS
+    ADS --> SI3
+    PW --> SI3
+    TGDC --> RC
+    RC --> RConv
+    PES --> API
+    API --> FEP
+
+    %% Conexiones Seminarios
+    SI1 --> SInv1
+    SInv1 --> SInv2
+    SInv2 --> SInv3
+    SI1 --> SI2
+    EDS --> SI2
+    SI2 --> SI3
+
+    %% Conexiones Comunicacion
+    C1 --> C2
+
+    %% Conexiones Sistemas
+    IIS --> NTS
+
+    %% Electivas Programacion
+    POO2 --> ADP
+    POO2 --> DT
+    POO --> LP
+    EDS --> IA
+    AA --> COMP
+    TC --> COMP
+    BD --> PD
+
+    %% Electivas Datos
+    PW --> MINDAT
+    BD --> MINDAT
+    BD --> BDA
+    BD --> GBD
+    BD --> ANDAT
+    BD --> ADMC
+
+    %% Electivas Redes
+    AC --> MM
+    TGDC --> RINAL
+    SO --> ASOR
+    SO --> COMPNUBE
+    SO --> SISDIST
+
+    %% Electivas Algoritmos
+    AA --> ATG
+    AA --> TG
+
+    %% Electivas Software
+    TGDC --> DAM
+    ADS --> DAM
+    TGDC --> SI
+    PW --> DAMICRO
+    BD --> DAMICRO
+    IS --> ARQSOFT
+    IS --> HTGP
+    IS --> AUDSIS
+    IS --> ARQONT
+    IS --> METAG
+    SO --> HACK
+
+    %% Electivas Sistemas
+    ADS --> SIG
+    ADS --> INFED
+    ADS --> SIEMP
+    ADS --> INFJUR
+    PES --> TDORG
+    PS --> SOLTECH
+
+    %% Electivas Gestion
+    API --> ADQP
+    PES --> GERT
+    IS --> EMP
+    FEP --> GTIC
+
+    %% Electivas Negocios
+    PES --> TGN
+    PES --> EFI
+    PES --> DNB
+    PES --> CN
+    PES --> PS
+    FEP --> EDTT
+    ADS --> EDTT
+
+    %% Electivas Sociales
+    IIS --> PSIC
+    IIS --> PSICIND
+    IIS --> PSF
+    IIS --> CPD
+    IIS --> RH
+    IIS --> ETICA
+    IIS --> TICEDAMB
+
+    %% Electivas Especiales
+    IA --> RN
+    IS --> DT
+
+    %% Proyectos
+    SI3 --> PRAC
+    SI3 --> PROYAC
+    SI3 --> PROYACOP
+    SI3 --> PROYGRAD
+    SInv3 --> PROYAC
+    SInv3 --> PROYACOP
+    SInv3 --> PROYGRAD
+
+    %% Estilos de colores por ruta
+    linkStyle 0,1,2,3,4,5,6,7 stroke:#0066cc,stroke-width:3px
+    linkStyle 8,9,10 stroke:#cc0000,stroke-width:3px
+    linkStyle 11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 stroke:#00aa00,stroke-width:3px
+    linkStyle 33,34,35,36,37,38 stroke:#ff9900,stroke-width:3px
+    linkStyle 39 stroke:#ff6600,stroke-width:3px
+    linkStyle 40 stroke:#9933cc,stroke-width:3px
+    linkStyle 41,42,43,44,45,46,47 stroke:#00aa00,stroke-width:2px
+    linkStyle 48,49,50,51,52,53 stroke:#8b4513,stroke-width:2px
+    linkStyle 54,55,56,57,58 stroke:#20b2aa,stroke-width:2px
+    linkStyle 59,60 stroke:#4169e1,stroke-width:2px
+    linkStyle 61,62,63,64,65,66,67,68,69,70,71 stroke:#ff1493,stroke-width:2px
+    linkStyle 72,73,74,75,76,77 stroke:#8b4513,stroke-width:2px
+    linkStyle 78,79,80,81 stroke:#696969,stroke-width:2px
+    linkStyle 82,83,84,85,86,87,88 stroke:#daa520,stroke-width:2px
+    linkStyle 89,90,91,92,93,94,95 stroke:#ff6347,stroke-width:2px
+    linkStyle 96,97 stroke:#00aa00,stroke-width:2px
+    linkStyle 98,99,100,101,102,103,104 stroke:#808080,stroke-width:2px
+
+    </div>
+</body>
+</html>
