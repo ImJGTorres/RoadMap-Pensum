@@ -75,6 +75,18 @@
     <div class="mermaid">
 %%{init: {'theme':'base', 'themeVariables': { 'fontSize':'12px'}, 'flowchart':{'rankSpacing':100, 'nodeSpacing':60, 'curve':'basis'}}}%%
 flowchart LR
+    %% Definir colores suaves por semestre
+    classDef sem1 fill:#FFE5E5,stroke:#333,stroke-width:2px,color:#000
+    classDef sem2 fill:#E5F3FF,stroke:#333,stroke-width:2px,color:#000
+    classDef sem3 fill:#E5FFE5,stroke:#333,stroke-width:2px,color:#000
+    classDef sem4 fill:#FFF5E5,stroke:#333,stroke-width:2px,color:#000
+    classDef sem5 fill:#F5E5FF,stroke:#333,stroke-width:2px,color:#000
+    classDef sem6 fill:#FFFFE5,stroke:#333,stroke-width:2px,color:#000
+    classDef sem7 fill:#E5FFFF,stroke:#333,stroke-width:2px,color:#000
+    classDef sem8 fill:#FFE5F5,stroke:#333,stroke-width:2px,color:#000
+    classDef sem9 fill:#F0F0F0,stroke:#333,stroke-width:2px,color:#000
+    classDef sem10 fill:#E1E1E1,stroke:#333,stroke-width:2px,color:#000
+    classDef electiva fill:#FAFAFA,stroke:#666,stroke-width:2px,color:#000
     %% Nodos - Matematicas
     CD["1155101<br/>Calculo diferencial<br/>(Semestre 1)"]
     CI["1155201<br/>Calculo integral<br/>(Semestre 2)"]
@@ -110,6 +122,9 @@ flowchart LR
     API["1155708<br/>Administracion de proyectos informaticos<br/>(Semestre 7)"]
     PES["1155608<br/>Planeacion estrategica de sistemas de inf<br/>(Semestre 6)"]
     FEP["1155808<br/>Formulacion y evaluacion de proyectos de sistemas<br/>(Semestre 8)"]
+    PRAC["1155909<br/>Practica en ing de sistemas<br/>(Semestre 9)"]
+    GTIC["1155908<br/>Gestion de tics<br/>(Semestre 9)"]
+    ARQSOFT["1155905<br/>Arquitectura de software<br/>(Semestre 9)"]
 
     %% Nodos - Electivas
     ADP["1155613<br/>Analisis de datos sobre python<br/>(Electiva)"]
@@ -132,7 +147,6 @@ flowchart LR
     COMPNUBE["1157004<br/>Computacion en la nube<br/>(Electiva)"]
     SISDIST["1157006<br/>Sistemas distribuidos<br/>(Electiva)"]
     DAMICRO["1157007<br/>Desarrollo de aplicaciones basadas en microservicios<br/>(Electiva)"]
-    ARQSOFT["1155905<br/>Arquitectura de software<br/>(Electiva)"]
     HTGP["1156904<br/>Herramientas tic para gestion de proyectos<br/>(Electiva)"]
     AUDSIS["1156906<br/>Auditoria de sistemas<br/>(Electiva)"]
     ARQONT["1156907<br/>Arquitectura dirigida por ontologias<br/>(Electiva)"]
@@ -148,15 +162,13 @@ flowchart LR
     ADQP["1155810<br/>Adquisiciones en la gestion de proyectos<br/>(Electiva)"]
     GERT["1156805<br/>Gerencia y tecnologia<br/>(Electiva)"]
     EMP["1155906<br/>Estrategias para la empleabiliad en sistemas<br/>(Electiva)"]
-    GTIC["1155908<br/>Gestion de tics<br/>(Electiva)"]
     PSIC["1155513<br/>Psicologia<br/>(Electiva)"]
     PSICIND["1155515<br/>Psicologia industrial<br/>(Electiva)"]
     PSF["1155511<br/>Problemas sociales de frontera<br/>(Electiva)"]
     CPD["1155516<br/>Catedra de paz desarrollo y posconflicto<br/>(Electiva)"]
     RH["1155522<br/>Relaciones humanas<br/>(Electiva)"]
-    ETICA["1155707<br/>Etica profesional<br/>(Electiva)"]
     DNB["1155406<br/>Descubriendo negocios basados tic<br/>(Electiva)"]
-    CN["1155612<br/>Crecimeinto de negocios<br/>(Electiva)"]
+    CN["1155612<br/>Crecimiento de negocios<br/>(Electiva)"]
     PS["1155611<br/>Proyecto social en ing de sistemas<br/>(Electiva)"]
     TGN["1155711<br/>Tecnicas gerenciales y de negociacion<br/>(Electiva)"]
     EFI["1155712<br/>Economia y finanzas para ingenieros<br/>(Electiva)"]
@@ -165,11 +177,11 @@ flowchart LR
     PD["1156701<br/>Patrones de diseño<br/>(Electiva)"]
     TICEDAMB["1156808<br/>Las tic y la educacion ambiental<br/>(Electiva)"]
     RN["1156910<br/>Redes neuronales<br/>(Electiva)"]
-    PRAC["1155909<br/>Practica en ing de sistemas<br/>(Electiva)"]
     PROYAC["1151058<br/>Proyecto academico<br/>(Electiva)"]
     PROYACOP["1156903<br/>Proyecto academico opcional<br/>(Electiva)"]
-    PROYGRAD["1156001<br/>Proyecto de grado<br/>(Electiva)"]
+    PROYGRAD["1156001<br/>Proyecto de grado<br/>(Semestre 10)"]
     CC["1155607<br/>Constitucion y civismo<br/>(Semestre 6)"]
+    ETICA["1155707<br/>Etica profesional<br/>(Semestre 7)"]
 
     %% Nodos - Comunicacion
     C1["1155106<br/>Comunicacion I<br/>(Semestre 1)"]
@@ -345,6 +357,30 @@ flowchart LR
     linkStyle 89,90,91,92,93,94,95 stroke:#ff6347,stroke-width:2px
     linkStyle 96,97 stroke:#00aa00,stroke-width:2px
     linkStyle 98,99,100,101,102,103,104 stroke:#808080,stroke-width:2px
+
+    %% Aplicar clases por semestre
+    %% Semestre 1
+    class CD,MDISC,FP,C1,IIS,IVU sem1
+    %% Semestre 2
+    class CI,AL,FM,POO,C2,SI1 sem2
+    %% Semestre 3
+    class CV,FE,EDS,POO2,SInv1 sem3
+    %% Semestre 4
+    class ED,PE,OP,AA,TC sem4
+    %% Semestre 5
+    class AN,IO,EL,AC,SInv2 sem5
+    %% Semestre 6
+    class SO,BD,PW,PES,CC,SI2,CRECNEG sem6
+    %% Semestre 7
+    class ADS,TGDC,API,SInv3,ETICA sem7
+    %% Semestre 8
+    class IS,RC,FEP,SI3 sem8
+    %% Semestre 9
+    class PRAC,GTIC,ARQSOFT sem9
+    %% Semestre 10
+    class PROYGRAD sem10
+    %% Electivas
+    class ADP,DT,MM,ATG,IA,TG,DAM,SI,MINDAT,LP,BDA,GBD,ANDAT,ADMC,RINAL,ASOR,RConv,COMPNUBE,SISDIST,DAMICRO,HTGP,AUDSIS,ARQONT,METAG,HACK,SIG,INFED,SIEMP,INFJUR,TDORG,SOLTECH,HES,ADQP,GERT,EMP,PSIC,PSICIND,PSF,CPD,RH,DNB,CN,PS,TGN,EFI,EDTT,COMP,PD,TICEDAMB,RN,PROYAC,PROYACOP,NTS electiva
 
     </div>
 </body>
